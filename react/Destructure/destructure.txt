@@ -1,0 +1,11 @@
+let person={
+name:'adarsh'
+department={
+ depname:'cse'
+}
+};
+let {name,department={depname}}=person;
+console.log(name,depname);
+
+output:
+adarsh

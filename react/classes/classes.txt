@@ -1,0 +1,19 @@
+class Human{
+constructor(){
+this.height=180;
+this.location={
+  x:0,y:0
+};
+}
+walk(x,y){
+	this.location.x+=x;
+        this.location.y+=y;
+}
+}
+let a=new Human();
+a.walk(5,10);
+console.log(a.location.x,a.location.y);
+
+
+output:
+5 10

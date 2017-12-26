@@ -1,0 +1,19 @@
+data.js
+export default 'helloworld!';
+export const a='world';
+export function printstring(){
+    return 'Photon';
+}
+
+index.js
+import hello from './lib/data.js';
+import {a,printstring} from './lib/data.js';
+let abc=printstring();
+console.log(a);
+console.log(`your company is ${abc}`);
+
+
+output:
+
+world
+your company is Photon

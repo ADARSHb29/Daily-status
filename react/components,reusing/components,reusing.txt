@@ -1,0 +1,29 @@
+HTML:
+<div id ="root"></div>
+
+
+CSS:
+.style
+{
+  color:red;
+}
+
+
+React js:
+
+function Employee(propss)
+{
+  return (
+    <div className="style">
+      <h1>{propss.name}</h1>
+      <h2>{propss.id}</h2>
+    </div>
+         );
+}
+let  a=(<div>
+<Employee name="adarsh" id="116595" />
+ <Employee name="arun" id="116594" />
+      </div>);
+
+ReactDOM.render( a,document.getElementById('root')
+);

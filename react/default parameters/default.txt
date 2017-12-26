@@ -1,0 +1,8 @@
+Default Parameters:
+let abc=(a,b=7)=>{
+ console.log(a,b);
+}
+console.log(abc(4));
+
+output:
+4 7

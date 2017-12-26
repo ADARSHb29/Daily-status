@@ -1,0 +1,32 @@
+let
+
+let a=10;
+if(1)
+{
+let a=6;
+}
+console.log(a);
+
+output:
+10
+
+
+const:
+
+
+const a=10;
+ a=5;
+console.log(a);
+
+output:
+Error-assignment to a constant variable
+
+
+template literals:
+
+let a='adarsh';
+let b='bala';
+console.log(`${a} ${b}`);
+
+output:
+adarsh bala

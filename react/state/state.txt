@@ -1,0 +1,101 @@
+app.js
+
+displaying data and sorting it:
+
+
+import React, { Component } from 'react';
+import {obj,Person_function} from './function/funct';
+import Header from './function/header';
+class App extends Component {
+  state={
+    persons:[{name:"Partha",age:21},{name:"adarsh",age:21}]
+  }
+ 
+    eventoccur= () =>{
+  
+
+
+   let person=[...this.state.persons];
+
+    let b=this.state.order;
+  
+  console.log(person);
+
+    if(b=="asc"){
+
+    person.sort((a,b)=>{
+
+      const nameA = a.name.toUpperCase();
+    const nameB = b.name.toUpperCase(); 
+ if (nameA < nameB) 
+{
+
+        return -1;
+
+      }
+
+      if (nameA > nameB) 
+{
+     
+   return 1;
+
+      }
+
+      
+      return 0;
+ 
+   })
+ 
+   this.setState({
+      persons:person,
+      order:"desc"
+    })
+  }
+    
+console.log(person);
+  
+  
+    if(b=="desc"){
+
+      person.sort((a,b)=>{
+
+        const nameA = a.name.toUpperCase();
+
+        const nameB = b.name.toUpperCase(); 
+
+        if (nameA < nameB) {
+
+          return 1;
+   
+     }
+ 
+       if (nameA > nameB) {
+
+          return -1;
+ 
+       }
+
+
+        return 0;
+     
+ })
+ 
+     this.setState({
+persons:person,order:"asc" })
+    }
+  
+  render(){
+    return (
+      <div>
+          <Header/>
+          <button onClick={this.eventoccur}>SortByName</button>
+      <Person_function name={this.state.persons[0].name} age={this.state.persons[0].age}/>
+      <Person_function name={this.state.persons[1].name} age={this.state.persons[1].age}/>
+      </div>
+    );
+  }
+}
+export default App;
+
+
+

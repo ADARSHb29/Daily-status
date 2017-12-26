@@ -1,0 +1,38 @@
+html:
+<div id="hello"></div>
+
+
+
+
+
+css:
+.sample{
+  color:red;
+  display:block;
+}
+
+
+
+
+
+
+
+
+
+
+
+react-js:
+function Person(props){
+  return (
+    <div className="sample">
+      <h1>{props.name}</h1>
+      <h2>{props.id}</h2>
+    </div>
+  );
+}
+let a=(<div>
+<Person name="chandi" id="11666604"/>
+<Person name="rakesh" id="116607"/>
+    </div>);
+
+ReactDOM.render(a,document.getElementById('hello'));
