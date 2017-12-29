@@ -1,0 +1,75 @@
+App.js
+
+import React, { Component } from 'react';
+import { obj, PersonFunction } from './function/funct';
+import Header from './function/header';
+class App extends Component {
+  state = {
+    persons: [{ name: "partha", age: 23 ,key:1}, { name: "adarsh", age: 21,key:2}],
+    order: "asc",
+    showBoolean:false
+  };
+  even = (index, event) => {
+    console.log("asd", index);
+    const { persons } = this.state;
+    persons[index].name = event.target.value;
+    this.setState({
+      persons
+    })
+  }
+
+  eventoccur = () => {
+    // console.log("ad")
+    // this.setState({
+    //persons:[{name:"Karthi",age:21},{name:"Tizen",age:21}]})
+    const person = [...this.state.persons];
+    const b = this.state.order;
+    console.log("haii")
+    const isAsc = (b == "asc");
+    person.sort((a, b) => {
+      return a.name < b.name ? isAsc ? -1 : 1 : a.name > b.name ? isAsc ? 1 : -1 : 0;
+    });
+    this.setState({
+      persons: person,
+      order: isAsc?"desc":"asc"
+    })
+    console.log(this.setState.order);
+  }
+  eventage = () => {
+    const person = [...this.state.persons];
+    const b = this.state.order;
+    console.log("haii")
+    const isAsc = (b == "asc");
+    person.sort((a,b) => {
+      return a.age < b.age ? isAsc ? -1 : 1 : a.age > b.age ? isAsc ? 1 : -1 : 0;
+    });
+    this.setState({
+      persons: person,
+      order: isAsc?"desc":"asc"
+    })
+  }
+  showHide=()=>{
+      const originalValue=this.state.showBoolean;
+      this.setState({showBoolean:!originalValue})
+      console.log("hai",this.state.showBoolean);
+  }
+  
+  render() {
+    let person=null;
+    if(this.state.showBoolean){
+       person = this.state.persons.map((n, index) => {
+        return (<PersonFunction {...n} click={this.even.bind(this, index)}>hai</PersonFunction>);
+      });
+    }
+    return (
+      <div>
+        <Header />
+        <div><button onClick={this.showHide}>ShowHide</button></div>
+        <div><button onClick={this.eventoccur}>SortByName</button></div>
+        <div><button onClick={this.eventage}>SortByAge</button> </div>
+        <div>{person}</div>
+      </div>
+    );
+  }
+}
+export default App;
