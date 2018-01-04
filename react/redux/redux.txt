@@ -1,0 +1,59 @@
+redux
+const  products=[
+  {
+    idno:"01",
+    name:"speaker",
+    price:1000
+  },
+  {
+    idno:"02",
+    name:"mobile",
+    price:5000},
+  {
+    idno:"03",
+    name:"tab",
+    price:10000}];
+
+const action={
+  type:"modify",
+  payload:{idno:"03",name:"tab",price:7000}
+};
+const modifyproduct=(state=[],action={})=>{
+  switch(action.type){
+    case "modify":
+      const abc=state.map((n)=>{
+       // console.log(n);
+      if(n.idno==action.payload.idno){
+       // state[2].price=action.payload.price;
+        // n.price=action.payload.price;
+        // return [...state,action.payload];
+       return{...action.payload};  
+       }
+        
+        
+        return n;
+    })
+      
+      console.log(abc);
+   default:return state
+  }
+}
+modifyproduct(products,action);
+
+
+Output:
+
+Console Run  Clear
+[[object Object] {
+  idno: "01",
+  name: "speaker",
+  price: 1000
+}, [object Object] {
+  idno: "02",
+  name: "mobile",
+  price: 5000
+}, [object Object] {
+  idno: "03",
+  name: "tab",
+  price: 7000
+}]
