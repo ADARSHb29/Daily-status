@@ -1,28 +1,26 @@
 export const selectUser = (user) => {
     return {
-        type: 'USER_SELECTED',
+        type: 'VIEW',
         payload: user
     }
 };
 export const deleteUser= (user) => {
     return {
-        type: 'delete',
+        type: 'DELETE',
         payload: user
     }
 };
- export const modify=(user,a)=>{
-     console.log(a);
-     console.log(user);
-     return{
-             type:'modify',
-             payload:{
-                first:user.first,
-                        last: user.last,
-                         age:a.age,
-                         description: user.description,
-                         id:user.id,
-                         thumbnail:user.thumbnail
+//  export const modify=(user)=>{
+//      return{
+//              type:'MODIFY',
+//              payload:user
+//             //     first:user.first,
+//             //             last: user.last,
+//             //              age:a.age,
+//             //              description: user.description,
+//             //              id:user.id,
+//             //              thumbnail:user.thumbnail
 
-             }
-     }
- };
+//             //  }
+//      }
+//  };

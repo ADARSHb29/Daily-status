@@ -7,7 +7,7 @@
 export default function (state = null, action) {
     //console.log(action);
     switch (action.type) {
-        case 'USER_SELECTED':
+        case 'VIEW':
             return action.payload;
             break;
         // case 'modify':
