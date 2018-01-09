@@ -1,0 +1,32 @@
+{
+  "employees": [
+    {
+      "name": "zeus",
+      "age": 2,
+      "designation": "trainee",
+      "id": 1
+    },
+    {
+      "name": "zs",
+      "age": 2,
+      "designation": "trainee",
+      "id": 2
+    }
+  ],
+  "students": [
+    {
+      "name": "venky",
+      "age": 100,
+      "designation": "trainee",
+      "id": 88
+    },
+    {
+      "name": "kar",
+      "id": 90
+    },
+    {
+      "college": "svce",
+      "id": 91
+    }
+  ]
+}
