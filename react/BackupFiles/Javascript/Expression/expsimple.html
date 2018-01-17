@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+<title>Expression</title>
+</head>
+<body>
+<p id="d"></p>
+<script type="text/javascript">
+	var a=['9','*','11','+','6','+','45','/','10'];
+	var len=a.length;var h=0,count=0,res=0,flag;
+	var res=parseInt(a[0]);
+	var j;
+	if(((a[0]=='+')||(a[len]=='+'))||((a[0]=='-')||(a[len]=='-'))||((a[0]=='*')||(a[len]=='*'))||((a[0]=='/')||(a[len]=='/')))
+	{
+		 flag=0;document.getElementById('d').innerHTML="invalid Expression";
+	}
+	if(flag!=0)
+	{
+		for(j=2;j<len;j=j+2)
+		{
+          if(a[j-1]=='+')
+          {
+            	res+=parseInt(a[j]);
+          }
+          else if(a[j-1]=='-')
+          {
+          	 
+            	res-=parseInt(a[j]);
+          }
+          else if(a[j-1]=='*')
+          { 
+            	res*=parseInt(a[j]);  
+          }
+          else if(a[j-1]=='/')
+          {
+            	res/=parseInt(a[j]);
+          }
+		}   
+	}
+  document.getElementById('d').innerHTML=res;
+</script>
+</body>
+</html>

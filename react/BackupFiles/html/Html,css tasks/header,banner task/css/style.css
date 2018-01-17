@@ -1,0 +1,150 @@
+
+.container{
+     padding-right:0px; 
+     padding-left:0px; 
+ }
+ .container>.navbar-header {
+    margin-right:0px; 
+    margin-left:0px; 
+}
+	.navbar.navbar-default {
+ border: none;
+}
+.nav-space{
+ padding-right:30px;
+}
+.nav-bgcolor{
+ background-color: #519ade; 
+ margin-bottom: 0px;
+}
+.navbar{
+ border:none;
+}
+.navbar-brand
+{
+ padding:5px;
+ padding-right: 15px;
+ margin-top: 5px;
+ margin-bottom: 5px;
+ display:inline-block;
+ border-right:3px solid  #e56c40;
+}
+.navbar-default .navbar-nav .active-nav>a{
+ background-color: none;
+ color:black;
+}
+.navbar-default .navbar-nav .other-nav>a{
+color: white;
+}
+.navbar-default .navbar-nav .dropdown-nav>a{
+ color: white;
+}
+.search-bar
+{
+ margin-top: 5px;
+ margin-bottom: 15px;
+ background-color: #4473af;
+ padding: 5px;
+ border:none;
+}
+.navbar-header{
+padding-top:5px;
+}
+.navbar-collapse{
+padding-top:10px;
+}
+.collapse{
+ border: none;
+ text-align:center;
+}
+
+.banner{
+	background-image: url("../images/bg55.jpg");
+	position: relative;
+}
+.edu{
+	font-family: "arial";
+	font-size:30px;
+	color:white;
+	text-align: center;
+	padding-left:15px;
+	background-color: rgba(0,0,0,0.3);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+   
+}
+.space-padding{
+	padding-left: 10px;
+	top: 200px;
+	padding-right: 50px;
+	padding-bottom: 10px;
+}
+.edu1{
+	margin-bottom: 0px;
+	padding-left: 5px;
+	padding-bottom: 10px;
+	padding-top:5px;
+	padding-right: auto; 
+	display: block;
+	color: white;	
+     font-family: "arial";
+}
+.form{
+ border-radius:0px;
+  border:none;
+  float: right;
+}
+.panel-default>.around-login{
+	background-color:#8a8a89;
+}
+.panel-body{
+ background-color: #e2e2e2;
+}
+.panel {
+    border:none;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+	.space-padding{
+	padding-left: 10px;
+	top: 25px;
+	padding-right: 50px;
+	padding-bottom: 10px;
+}
+ .navbar-default .navbar-collapse{
+       border-color: none;
+ } 
+ .navbar-default .navbar-collapse .active-nav>a{
+ background-color: none;
+ color:#519ade;
+ }
+ .search-bar {
+   margin-left: 5px;
+   margin-right: 5px;
+   margin-bottom: 0px;
+ }
+ .dropdown-nav{
+   padding-right: 29px;
+ }
+ .image-up{
+ 	position: absolute;
+ 	background-color: rgba(0,0,0,0.7)
+ }
+ .banner{
+ 	padding-bottom: 0px;
+ }
+ .edu{
+   padding-right: 5px;
+ }
+ .edu1{
+ 	padding-right: 5px;
+ }
+}
+@media only screen and (min-width: 768px){
+.navbar-right{
+    float: right;
+    margin-right:0px;
+}
+}

@@ -1,0 +1,282 @@
+.container
+{
+  padding:0px;
+}
+.row
+{
+  margin:0px;
+}
+.navbar 
+{ 
+	margin-bottom: 0;
+	border-radius: 0%;
+}
+.navbar-inverse
+{  
+  padding-right: 10px;
+  padding-left: 10px;
+   background-color:#519ade;
+   border-color: #519ade;
+}
+.navbar-brand
+{
+   padding:5px;
+}
+.logo
+{
+  padding-right:10px;
+	margin-top: 10px;
+	display:inline-block;
+	border-right:2px solid  #f26622;
+}
+h1
+{
+  margin:0px;
+}
+.navbar-nav
+{
+  margin-top:10px;
+}
+.navbar-inverse .navbar-nav .navbar-content a
+{
+   margin-right:40px; 
+   padding-top:  15px; 
+    color: white;
+    padding-left: 25px;
+}
+.navbar-inverse .navbar-nav .navbar-home a
+{
+  margin-right:40px; 
+  padding-top:  15px;
+  padding-left: 25px;
+ color:black;
+}
+.navbar-inverse .navbar-nav .open a:hover
+ {
+    background-color: #519ade;
+}
+.navbar-nav li .dropdown-menu
+{
+  text-align: center;
+  background-color: #519ade;
+}
+.search-color
+{
+  margin-right:10px;
+  margin-top: 15px;
+  margin-left:10px;
+  padding:3px;
+  background-color: #337ab7;
+}
+.toggle
+{
+  margin-top: 10px;
+  display:inline-block;
+  float:right;
+}
+.navbar-inverse .navbar-toggle
+{
+    border-color: white;
+}
+.navbar-inverse .navbar-toggle .icon-bar 
+{
+    background-color:red;
+}
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover 
+{
+     background-color: #519ade; 
+}
+.navbar-inverse .navbar-form
+{
+    border:none;
+}
+.toggle_mobileview{
+  text-align: center;
+  border:none;
+}
+.background-img
+{
+    height: auto;
+    background-image: url("../images/bg55.jpg");
+background-size:100% 100%;
+}
+.above-image-content
+{
+    margin-left:15px;
+    padding-left: 50px;
+     height:110px;
+}
+.background-writings
+{
+  margin-top: 30px;
+  padding-left: 30px;
+	text-transform: uppercase;
+	font-size: 53px;
+	background-color: rgba(0,0,0,0.5);
+    color:white;
+}
+.successful-content
+{
+  margin-top: 30px;
+  padding-left: 30px;
+	text-transform: uppercase;
+	font-size: 15px;
+	color:white;
+}
+
+.login-form
+{    padding-left:90px;
+     padding-top: 30px;
+}
+.panel-default .panel-heading
+{
+  background-color:#8a8a89;
+  color:#ffffff;
+}
+
+.form-admin
+{
+  margin-right:50px;
+
+}
+input[type='radio'] 
+{
+  -webkit-appearance:none;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  outline:none;
+  box-shadow:0 0 5px 0px gray inset;
+}
+
+input[type='radio']:after
+ {
+  content:'';
+  display:block;
+  width:60%;
+  height:60%;
+  margin: 20% auto;    
+  border-radius:50%;    
+}
+input[type='radio']:checked:after
+{
+  background:#519ade;
+}
+.service-content
+{
+  padding-top:40px;
+  padding-bottom:40px;
+}
+.more-details-content
+{
+  color:black;
+  font-size:14px;
+}
+.service-logo
+{
+  margin-bottom:30px;
+  text-align: center; 
+}
+.sign
+{
+  color:white;
+  background: #C21320;
+   width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 15px;
+  border-color: #C21320;
+  font-size: 30px;
+  float: left;
+  padding-top: 15px;
+  padding-left:15px;
+}
+.glyphicon-zoom-in
+{
+
+   font-size: 30px;
+   color: black;
+}
+.services-content
+{
+  color:darkgray;
+  font-family: arial;
+  font-size: 13px;
+  margin-left: 70px;
+}
+.service-heading-content
+{
+  margin-top:5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  font-family:Arial;
+}
+h2
+{
+  color:#519ade;
+  font-size:16px;
+  font-weight: bold;
+}
+
+@media all and (max-width: 720px)and (min-width: 200px)
+{
+  .navbar-inverse
+  {  
+       padding:0px;
+  }
+   .navbar-inverse .navbar-nav .open a:hover
+  {
+        background-color:rgba(0,0,0,0.3);
+  }
+  .toggle_mobileview
+  { 
+     position:absolute;
+     background-color: rgba(0,0,0,0.8);
+     text-align: center;
+     border:none;
+
+  }
+    .navbar-inverse .navbar-nav .navbar-home a
+  {
+     padding-top:  15px;
+     padding-left: 25px;
+     color:#519ade;
+  }
+	.above-image-content
+	{
+     height:50px;
+   }
+	.background-writings
+  {
+     margin-top: 40px;
+     margin-left: 10px;
+     margin-bottom: 10px;
+     padding-left:10px;
+	   text-transform: uppercase;
+	   font-size: 20px;
+	   background-color: rgba(0,0,0,0.5);
+     color:white;
+   }
+   .successful-content
+   {
+     margin-left:20px;
+     padding-left:15px;
+     margin: 0px;
+     text-transform: uppercase;
+     font-size: 9px;
+     color:white;
+   }
+  .service-content
+  {
+      padding-bottom:0px;
+  }
+  .service-heading-content
+  {
+      font-size: 25px;
+  }
+  .service-logo
+  {
+      margin-bottom:0px;
+  } 
+}

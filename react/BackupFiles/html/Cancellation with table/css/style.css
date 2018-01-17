@@ -1,0 +1,26 @@
+.Ticket_table,.Table_Heading,.Table_Data {
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+}
+.BookedTicket_Color{
+	background-color: #206ae5;
+}
+.Content_Color{
+background-color:#7ea5e5;
+}
+.Table_Heading{
+    padding:5px;
+    }
+ .Table_Data{
+ 	padding:5px;
+    text-align: left;
+}
+.table-wholesection
+{
+	padding-top:250px;
+}
+.radio-icon
+{
+	position: relative;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>Journey details</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+
+ <link rel="stylesheet" href="journey-details.css">
+  <link rel="stylesheet" href="journey-details.js">
+
+
+ </head>
+
+ <body ng-app="ui.bootstrap.demo">
+
+ <section class="container">
+
+ <Section class="row one">
+ 	<section class="col-lg-3">
+ 		<div class="form-group">
+  <label>Chennai:</label>
+  <select class="form-control"  name="dropdown1">
+  	<option></option>
+    <option>Chennai</option>
+    <option>Coimbatore</option>
+    <option>Trichy</option>
+    <option>Salem</option>
+  </select>
+		</div>
+ 	</section>
+ 	<section class="col-lg-3">
+ 		<div class="form-group">
+  <label>To:</label>
+  <select class="form-control"  name="dropdown2">
+  	<option></option>
+    <option>Chennai</option>
+    <option>Coimbatore</option>
+    <option>Trichy</option>
+    <option>Salem</option>
+  </select>
+		</div>
+ 	</section>
+ 	<section class="col-lg-3" ng-controller="DatepickerPopupDemoCtrl">
+ 		
+      	 <label>Journey-Date:</label>
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </p>
+      
+ 	</section>
+ 	<section class="col-lg-3"></section>
+ 	<section class="col-lg-3"></section>
+ </Section>
+
+
+
+
+ </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </body>
+
+ </html>

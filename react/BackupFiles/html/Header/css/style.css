@@ -1,0 +1,52 @@
+
+.navbar-inverse{
+	background-color: #519ade;
+}
+.nav-logo{
+	width: 130px;
+	padding-top: 10px;
+	border-right: 2px;
+	border-style: solid;
+	border-color:#f26622;
+    margin-top: 2px;
+    padding-right: 10px;
+
+}
+.navbar{
+	border:none;
+}
+.nav-fontcolor{
+	color: white;
+}
+.pad{
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.box{
+	float: right;
+	display: inline-block;
+	border:1px;
+	margin: 5px 0px 5px 0px;
+	text-align: center;
+}
+.collapse{
+	border:none;
+}
+.search-bar{
+	border:none;
+}
+
+
+.navbar-inverse .nav-text>li>a{
+	color: white;
+}
+.search-color{
+	background-color: #337ab7;
+	padding: 3px;
+}
+.logo-space{
+	margin-top: 2px;
+}
+.input-group{
+	text-align: center;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+tr.highlighted td {
+    background: red;
+}
+</style>
+<script>
+$('tr').click(function(e) {
+    $('tr').removeClass('highlighted');
+    $(this).addClass('highlighted');
+});
+
+</script>
+</head>
+<body>
+<table id="data" border="1" cellspacing="1" width="500" id="table1">
+    <tr>
+        <td>Hello</td>
+        <td>Hello</td>
+        <td>Hello;</td>
+        <td>Hello;</td>
+    </tr>
+    <tr>
+        <td>Hello</td>
+        <td>Hello;</td>
+        <td>Hello</td>
+        <td>Hello;</td>
+    </tr>
+    <tr>
+        <td>Hello</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+</body>
+</html>

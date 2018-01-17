@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div><label><b>Username</b></label></div>
+<div><input type="text" id="box1"/></div>
+<div><label value="Password"><b>Password</b></label></div>
+<div><input type="password" id="box2"/></div>
+<div>
+<button type="button" class="b1" onclick="hello()">Login</button>
+<button type="button" onclick="location.href='signup.html'">SignUp</button>
+</div>
+<script type="text/javascript">
+    
+    function hello()
+    {
+    	var username=document.getElementById("box1").value;
+        var password=document.getElementById("box2").value;
+        var cmp=localStorage.getItem("allEntries");var j=(JSON.parse(cmp));
+        var flag=0,i;
+        console.log(j);
+    	if((username=='')||(password==''))
+    	{
+    		alert("enter the credentials!!");
+    	}
+    	else
+    	{
+            if (null != j[username] && j[username] == password) {
+                location.href="home.html";
+            } else {
+		    	alert("invalid data");
+		    }      
+    	}
+    }
+
+</script>
+</body>
+</html>

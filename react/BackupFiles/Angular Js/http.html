@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+</head>
+<body ng-app="hello" ng-controller="httpctrl">
+<script type="text/javascript">
+	var myapp=angular.module("hello",[]);
+    myapp.controller("httpctrl",function($scope,$http){
+    	$http.get('http.html').then(function(success){
+    		alert("success");
+    	});
+    });
+</script>
+</body>
+</html>

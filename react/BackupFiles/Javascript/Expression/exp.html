@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+<title>Expression</title>
+</head>
+<body>
+<p id="d"></p>
+<script type="text/javascript">
+	var a=['9','+','11','*','4'];
+	var len=a.length;var h=0,count=0,res=0,flag;
+	var j;
+    
+	if(((a[0]=='+')||(a[len]=='+'))||((a[0]=='-')||(a[len]=='-'))||((a[0]=='*')||(a[len]=='*'))||((a[0]=='/')||(a[len]=='/')))
+	{
+		 flag=0;document.getElementById('d').innerHTML="invalid Expression";
+	}
+	if(flag!=0)
+	{
+		for(j=1;j<len;j=j+2)
+		{
+          if(a[j]=='+')
+          {
+          	 if(count==0)
+          	{
+          	 h=parseInt(a[j-1]) + parseInt(a[j+1]);
+          	  res=h;
+          	document.getElementById('d').innerHTML=h;
+            }
+
+            if(count)
+            {
+            	res+=parseInt(a[j+1]);
+            	document.getElementById('d').innerHTML=res;
+            }
+            count++;
+          }
+          else if(a[j]=='-')
+          {
+          	 if(count==0)
+          	{
+          	 h=parseInt(a[j-1]) - parseInt(a[j+1]);
+          	 res=h;
+          	document.getElementById('d').innerHTML=h;
+            }
+            if(count)
+            {
+            	res-=parseInt(a[j+1]);
+            	document.getElementById('d').innerHTML=res;
+            }
+            count++;
+          }
+          else if(a[j]=='*')
+          {
+          	 if(count==0)
+          	{
+          	 h=parseInt(a[j-1]) * parseInt(a[j+1]);
+          	 res=h;
+          	document.getElementById('d').innerHTML=h;
+            }
+            if(count)
+            {
+            	res*=parseInt(a[j+1]);
+            	document.getElementById('d').innerHTML=res;
+            }
+            count++;
+          }
+          else if(a[j]=='/')
+          {
+          	if(count==0)
+          	{
+          	 h=parseInt(a[j-1]) / parseInt(a[j+1]);
+          	 res=h;
+          	document.getElementById('d').innerHTML=h;
+            }
+            if(count)
+            {
+            	res/=parseInt(a[j+1]);
+            	document.getElementById('d').innerHTML=res;
+            }
+            count++;
+          }
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+main app :
+
+
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import {Partha} from './function/funct'
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+         <Partha />
+      </div>
+    );
+  }
+}
+
+export default App;
+
+
+function :
+
+
+import React from 'react';
+import './funct.css';
+
+export default ()=>{
+    return(<h1 className="new">hai emp </h1>);
+}
+ const Partha = ()=>{
+    return (<h1 className="new">hai partha </h1>);
+};
+
+export const Str="hai";
+export {Partha};
+export const Emp = {name:'partha',age:21
+}
+
+
+
+index.js:
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();

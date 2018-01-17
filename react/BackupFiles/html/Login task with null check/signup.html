@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div><label><b>Username</b></label></div>
+<div><input type="text" id="box3" placeholder="Enter the username:"/></div>
+<div><label value="Password"><b>Password</b></label></div>
+<div><input type="password" id="box4" placeholder="Enter the password"/></div>
+<div>
+	<button type="button" onclick="store()">Submit</button>
+</div>
+<script type="text/javascript">
+	
+	function store(){
+		var existEntries = JSON.parse(localStorage.getItem("allEntries"));
+        if (existEntries == null){existEntries ={};}
+		var signupuser=document.getElementById('box3').value;
+	    var signuppwd=document.getElementById('box4').value;
+		if ((signupuser=='')||(signuppwd=='')) {
+    		alert("enter the credentials!!");
+    	}
+    	else {
+    		if (null != existEntries[signupuser]) {
+    			alert("username already exists");
+    		}
+    		else{
+			existEntries[signupuser]=signuppwd;
+			localStorage.setItem("allEntries",JSON.stringify(existEntries));
+    		alert("registered!!")
+			location.href='index.html';
+		      }
+	    }
+	}
+</script>
+</body>
+</html>

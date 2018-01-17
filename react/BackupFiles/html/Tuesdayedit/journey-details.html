@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Journey</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+ <script src="js/script.js"></script>
+</head>
+<body class="form-bg">
+
+<nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+     <a href="index.html"><img class="navbar-brand nav-logo" src="images/photon-logo.png"></a>
+      <button type="button" class="navbar-toggle col-lg-6" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav nav-list-align">
+        <li><a href="cancellation.html">Cancellation</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">FAQ's</a></li>
+        </ul>
+        <button type="button" class="btn btn-primary btn-lg home-sign-up-button" data-toggle="modal" data-target="#myModal">
+  Sign out
+</button>
+    </div>
+    </nav>
+
+
+<section class="col-lg-12 col-sm-12 col-xs-12">
+<section class="row">
+ <section class="col-lg-4 col-lg-offset-3 form-align">
+      <section class="panel panel-default form-align2">
+        <section class="panel-heading"><h3 class="panel-title"><strong>Enter Journey Details</strong></h3>
+        </section>
+        <section class="panel-body">
+<section>
+<form role="form">
+            <section class="form-group">
+              <label id="pick-up" for="from">From:
+              </label>
+              <input type="text" class="form-control" id="from" placeholder="Enter Pickup Location">
+            </section>
+            <section class="form-group">
+              <label id="drop" for="to">To:
+              </label>
+              <input type="text" class="form-control" id="to" placeholder="Enter Drop Location">
+            </section>
+
+     <div class="form-group ">
+      <label class="control-label requiredField" for="date">
+       Date
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+       <div class="input-group">
+        <div class="input-group-addon">
+         <i class="fa fa-calendar ">
+         </i>
+        </div>
+        <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
+       </div>
+     </div>
+     <div class="form-group">
+      <div>
+       <input name="_honey" style="display:none" type="text"/>
+      </div>
+     </div>
+
+            
+          </form>  
+
+
+  </section> 
+     </section> 
+     
+     </section> 
+     </section> 
+       </section>
+
+
+
+     <section class="col-lg-12">
+     <div class="text-center">
+             <button class="btn btn-primary search-btn" type="button" onclick="ShowBus()" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+ Search Bus
+</button>
+</div>
+
+<div class="collapse" id="collapseExample">
+  <div class="well">
+   
+
+<div class="row">
+    <div class="col-lg-3 ">
+    <p class="seat_Trip">Trip Master<p></div>
+    <div class="col-lg-3 " >
+    <p class="seat_Time">14:30</p>
+    </div>
+    <div class="col-lg-3">
+    <p class="seat_Avail">30 Seats</p>
+    </div>
+    <div class="col-lg-3 seat_button"><a class="view-seat-link" href="seat.html"><button class="btn btn-primary view-seat-btn">Book</a></div>
+  </div>
+
+
+  </div>
+</div> 
+             </section>
+
+    </section> 
+
+
+<footer>
+  <section class="social-align">
+<a href="#" class="social fa fa-facebook "></a>
+<a href="#" class="social fa fa-twitter"></a>
+<a href="#" class="social fa fa-google"></a>
+<a href="#" class="social 
+fa fa-linkedin"></a>
+</section>
+  <p class="copyright">&copy; Copyright 2017 GoTrip. All Rights Reserved.</p>
+</footer>
+
+
+             
+
+
+
+
+
+
+
+<!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+<!-- Include jQuery -->
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap-datepicker3.css"/>
+
+<script>
+	$(document).ready(function(){
+		var date_input=$('input[name="date"]'); //our date input has the name "date"
+		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		date_input.datepicker({
+			format: 'dd/mm/yyyy',
+			container: container,
+			todayHighlight: true,
+			autoclose: true,
+		})
+	})
+</script>
+
+</body>
+
+</html>

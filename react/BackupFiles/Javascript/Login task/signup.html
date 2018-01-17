@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div><label><b>Username</b></label></div>
+<div><input type="text" id="box3" placeholder="Enter the username:"/></div>
+<div><label value="Password"><b>Password</b></label></div>
+<div><input type="password" id="box4" placeholder="Enter the password"/></div>
+<div>
+	<button type="button" onclick="store()">Submit</button>
+</div>
+<script type="text/javascript">
+	
+	function store(){
+		var existEntries = JSON.parse(localStorage.getItem("allEntries"));
+        if(existEntries == null) existEntries = [];
+		var b1=document.getElementById('box3').value;  
+	    var b2=document.getElementById('box4').value;
+		var userpwd={b1:b2};
+		localStorage.setItem("userpwd",JSON.stringify(userpwd));
+		existEntries.push(userpwd);
+		localStorage.setItem("allEntries",JSON.stringify(existEntries));
+		console.log(existEntries);
+		if((b1=='')||(b2==''))
+    	{
+    		alert("enter the credentials!!");
+    	}
+    	else{
+    		alert("registered!!")
+		location.href='index.html';
+	        }
+	}
+</script>
+</body>
+</html>

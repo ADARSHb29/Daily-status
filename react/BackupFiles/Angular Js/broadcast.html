@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+</head>
+<body ng-app="broadeg">
+<div ng-controller="parentctrl">
+	<h1>Parent</h1>
+	<div ng-controller="childctrl">
+	<p ng-model="a">{{a}}</p>
+	</div>
+</div>
+<script>
+	var app=angular.module("broadeg",[]);
+	app.controller("parentctrl",function($scope){
+		$scope.$broadcast("showname","hello photon");
+	});
+	app.controller("childctrl",function($scope){
+		$scope.$on("showname",function(event,data)
+		{
+			$scope.a=data;
+		});
+	});
+</script>
+</body>
+</html>

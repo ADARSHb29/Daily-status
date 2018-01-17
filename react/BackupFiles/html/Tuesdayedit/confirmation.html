@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="helloApp">
+<head>
+  <title>Journey Confirmation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="js/script.js"></script>
+<script>
+  var App = angular.module("helloApp", []);
+App.controller("CompanyCtrl", function($scope) {
+$scope.companies = [
+                    { 'empid':116418,
+                      'name':  'Ananthy',
+                      'ploc':'Chennai',
+            'dloc':'Bangalore',
+            'jdate':'10/11/2017',
+            'status':'confirmed'
+          }                                  
+                          
+                    ];
+});
+
+</script> 
+
+</head>
+<body class="confirmation-bg" ng-controller="CompanyCtrl">
+
+
+      
+
+
+<!--header-->
+
+<nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+     <a href="index.html"><img class="navbar-brand nav-logo" src="images/photon-logo.png"></a>
+      <button type="button" class="navbar-toggle col-lg-6" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav nav-list-align">
+        <li><a href="cancellation.html">Cancellation</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">FAQ's</a></li>
+        </ul>
+        <button type="button" class="btn btn-primary btn-lg home-sign-up-button" data-toggle="modal" data-target="#myModal">
+  Sign out
+</button>
+    </div>
+    </nav>
+
+<section class="col-lg-1 col-sm-1 col-xs-2 print-btn-align">
+<a title="print screen" alt="print screen" onclick="window.print();" target="_blank" style="cursor:pointer;"><img class="print-icon" src="images/print.png" alt="print icon"></a>
+ </section>
+<h1 class="confirmation-heading">Happy Journey!!!</h1>
+<div class="container">
+<div class="container container_addbus">
+
+<table class="table confirmation-table-font table-bordered" >
+  
+<div class="mobileErgDiv" >
+      <tr>
+                <th>Employee ID</th>
+                <td>{{companies[0].empid}}</td>
+            </tr>
+       <tr>
+                <th>Name</th>
+                <td>{{companies[0].name}}</td>
+            </tr>
+       <tr>
+                <th>Pickup Location</th>
+                <td>{{companies[0].ploc}}</td>
+            </tr>
+       <tr>
+                <th>Drop Location</th>
+                <td>{{companies[0].dloc}}</td>
+            </tr>
+       <tr>
+                <th>Journey Date</th>
+                <td>{{companies[0].jdate}}</td>
+            </tr>
+      <tr>
+                <th>Booking Status</th>
+                <td>{{companies[0].status}}</td>
+            </tr>
+</div>    
+</table>
+
+
+</div>  
+</div>
+
+  
+  
+  <!--footer-->
+  
+  
+  
+
+<footer>
+  <section class="social-align">
+<a href="#" class="social fa fa-facebook "></a>
+<a href="#" class="social fa fa-twitter"></a>
+<a href="#" class="social fa fa-google"></a>
+<a href="#" class="social 
+fa fa-linkedin"></a>
+</section>
+  <p class="copyright">&copy; Copyright 2017 GoTrip. All Rights Reserved.</p>
+</footer>
+
+
+
+</body>
+</html>
