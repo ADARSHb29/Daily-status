@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     <a class="navbar-brand icons_header" href="#">Logo</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+       
+        
+       
+        
+      </ul>
+      <ul class="nav icons_header navbar-nav navbar-right">
+	  <li><a href="#">About</a></li>
+	  <li><a href="#">Contact</a></li>
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a> -->
+		<li><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Sign-in
+</button>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">      
+		<div id="form">
+	<div class="container innercontainer">
+		<div class="col-lg-12">
+		<div id="userform">
+		<ul class="nav nav-tabs nav-justified" role="tablist">
+			<li  class="active"><a href="#signup"  role="tab" data-toggle="tab">Sign up</a></li>
+			<li><a href="#login"  role="tab" data-toggle="tab">Log in</a></li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane fade active in" id="signup">
+			<h2 class="text-uppercase text-center"> Sign Up for Free</h2>
+			<form id="signup">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group">
+							<!--<label>First Name<span class="req">*</span> </label>-->
+							<input type="text" class="form-control" id="first_name" required data-validation-required-message="Please enter your name." autocomplete="off" placeholder="FirstName">
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group">
+							<!-- <label> Last Name<span class="req">*</span> </label> -->
+							<input type="text" class="form-control" id="last_name" required data-validation-required-message="Please enter your name." autocomplete="off" placeholder="LastName">
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<!-- <label> Your Email<span class="req">*</span> </label> -->
+					<input type="text" class="form-control" id="email" required data-validation-required-message="Please enter your employeeid." autocomplete="off" placeholder="Employee Id">
+					<p class="help-block text-danger"></p>
+				</div>
+				<div class="form-group">
+					<!-- <label> Your Phone<span class="req">*</span> </label> -->
+					<input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number." autocomplete="off" placeholder="Contact">
+					<p class="help-block text-danger"></p>
+				</div>
+				<div class="form-group">
+					<!-- <label> Password<span class="req">*</span> </label> -->
+					<input type="password" class="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off" placeholder="Password">
+					<p class="help-block text-danger"></p>
+				</div>
+				<div class="mrgn-30-top">
+				<button type="submit" class="btn btn-larger btn-block"/>Sign up</button>
+				</div>
+			</form>
+			</div>
+			<div class="tab-pane fade in" id="login">
+			<h2 class="text-uppercase text-center"> Log in</h2>
+			<form id="login">
+				<div class="form-group">
+					<!-- <label> Your Email<span class="req">*</span> </label> -->
+					<input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your employeeid." autocomplete="off" placeholder="Employee Id">
+					<p class="help-block text-danger"></p>
+				</div>
+				<div class="form-group">
+					<!-- <label> Password<span class="req">*</span> </label> -->
+					<input type="password" class="form-control" id="password" required data-validation-required-message="Please enter your password" autocomplete="off" placeholder="Password">
+					<p class="help-block text-danger"></p>
+				</div>
+				<div class="mrgn-30-top">
+					<button type="submit" class="btn btn-larger btn-block"/>Log in</button>
+				</div>
+			</form>
+			</div>
+		</div>
+		</div>
+		</div>
+		</div>
+	</div>
+<!-- /.container -->
+	</div>
+	</div>
+
+
+		</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+                <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper For Slides -->
+            <div class="carousel-inner" role="listbox">
+
+                <!-- Third Slide -->
+                <div class="item active">
+
+                    <!-- Slide Background -->
+                    <img src="images/img2.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                    <div class="bs-slider-overlay"></div>
+
+                    <div class="container">
+                        <div class="row">
+                            <!-- Slide Text Layer -->
+                            <div class="slide-text slide_style_left">
+                                <h1 data-animation="animated zoomInRight">Go Trip</h1>
+                                <p data-animation="animated fadeInLeft">Travelling is now made divine.</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Slide -->
+
+                <!-- Second Slide -->
+                <div class="item">
+
+                    <!-- Slide Background -->
+                    <img src="images/kkk.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                    <div class="bs-slider-overlay"></div>
+                    <!-- Slide Text Layer -->
+                    <div class="slide-text slide_style_center">
+                        <h1 data-animation="animated flipInX">Exclusively for Photonites</h1>
+                        <p data-animation="animated lightSpeedIn">Lets Travel together.</p>
+                        
+                    </div>
+                </div>
+                <!-- End of Slide -->
+
+                <!-- Third Slide -->
+                <div class="item">
+
+                    <!-- Slide Background -->
+                    <img src="images/bus45.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                    <div class="bs-slider-overlay"></div>
+                    <!-- Slide Text Layer -->
+                    <div class="slide-text slide_style_right">
+                        <h1 data-animation="animated zoomInLeft">Travelling is made Fun</h1>
+                        <p data-animation="animated fadeInRight">Get Ready to Explore .</p>
+                      
+                    </div>
+                </div>
+                <!-- End of Slide -->
+
+
+            </div><!-- End of Wrapper For Slides -->
+
+            <!-- Left Control -->
+            <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+                <span class="fa fa-angle-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <!-- Right Control -->
+            <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+                <span class="fa fa-angle-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+			</div>
+			
+			
+			<div class="ads">
+				<div class="row">
+				<div class="container layout">
+				<div class="col-lg-4 left">
+					<div class="jumbotron left_card">  
+					</div>
+				</div>
+			<div class="col-lg-4 middle">
+			<div class="jumbotron middle_card">
+			</div>
+			</div>
+			<div class="col-lg-4 right">
+		<div class="jumbotron right_card">  
+		</div>
+		</div>
+		</div>
+		</div>
+			</div>
+			
+			
+			
+			
+			<section class="container box">
+				<section class="row">
+				<iframe class="col-lg-4 col-xs-12 video" width="425" height="190" src="https://www.youtube.com/embed/F9Bo89m2f6g" frameborder="0" allowfullscreen></iframe>
+				<section class="col-lg-4 col-xs-hidden text-center">
+				<p class="text">Be The REAL KING
+				of bus travel</p>
+				</section>
+				<section class="col-lg-4 col-xs-hidden go_trip">
+				<div class="info-box-item ">
+				<div class="info-box-icon fav"><i class="fa fa-paper-plane"></i></div>
+				
+				</div>
+				
+				</section>
+				
+			</section>
+			</section>
+  
+<div class="container-fluid confooter">
+
+<div class="col-lg-6 col-xs-12 tripimg">
+
+<p class="abt">GoTrip is the world's largest online bus ticket booking service trusted by over 8 million happy customers globally. GoTrip offers bus ticket booking through its website,iOS and Android mobile apps for all major routes.
+</p>
+
+</div>
+
+<div class="col-lg-6 col-xs-12 details">
+<h3>Corporate Office</h3>
+
+<div class="row">
+<div class="col-lg-2"><span class="fa fa-map-marker marker"></span> Address :</div>
+<div class="col-lg-10">AB Towers, #148, Perambur Barracks Road, Purasawalkam, Chennai - 600 007.Tamil Nadu, South India.</div>
+</div>
+<br>
+<div class="row">
+<div class="col-lg-2"><span class="glyphicon glyphicon-earphone earphone"></span> Phone :</div>
+<div class="col-lg-10">044 4900 7555 / 1800 102 0999</div>
+</div>
+<br>
+<div class="row">
+<div class="col-lg-2"><span class="glyphicon glyphicon-envelope envelope"></span> Email :</div>
+<div class="col-lg-10">customercare@gotrip.com</div>
+</div>
+</div>
+
+</div>
+
+
+<footer class="container-fluid text-center">
+<ul class="menuli"> 
+    <li class="linkedin"><i class="fa fa-linkedin-square linkedin"></i></li>
+    <li class="twitter"><i class="fa fa-twitter-square twitter"></i></li>
+	<li class="fb"><i class="fa fa-facebook-square fbook"></i></li>
+  </ul>
+  <p class="copyright">&copy; Copyright 2017 GoTrip. All Rights Reserved.</p>
+</footer>
+
+
+
+
+
+
+
+</body>
+</html>

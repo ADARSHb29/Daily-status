@@ -1,0 +1,16 @@
+call by refrence:
+
+
+const a=[1,2,3];
+var b=a;
+a[0]=5;
+console.log(a,b);
+
+
+call by value:
+
+
+var c=10;
+var d=c;
+c=5;
+console.log(c,d);

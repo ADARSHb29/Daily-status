@@ -1,0 +1,133 @@
+app.js:
+
+
+import React, { Component } from 'react';
+import './App.css';
+import { PersonFunction } from './function/funct';
+import Head from './header/header';
+
+class App extends Component {
+  state = {
+    employee: [
+      {
+        name: "partha", key: 1,
+        age: 21, company: "photon", branch: "xyz"
+      }, {
+        name: "adarsh", key: 2, age: 25,
+        company: "photon", branch: "xyz"
+      }, {
+        name: "nirmal", key: 5, age: 56, company: "photon", branch: "xyz"
+      }], order: "asc"
+  };
+
+  change_state_value = (a, b) => this.setState({
+    employee: [
+      { name: a, key: 4, age: 20, company: "photon", branch: "xyz" }, { name: b, key: 6, age: 21, company: "photon", branch: "xyz" }, { name: "nirmal pandi", key: 7, age: 22, company: "photon", branch: "xyz" }]
+  });
+
+
+
+  sortingByName = () => {
+    const {employee,order}=this.state;
+    const value = (order === 'asc')?[1,-1,'desc']:[-1,1,'asc'];
+    employee.sort((x, y) => {
+      return y.name> x.name? value[0] : y.name< x.name? value[1] : 0;
+    });
+
+    this.setState({ employee, order: value[2] });
+
+
+  }
+  sortingByAge = () => {
+    let a = [...this.state.employee];
+
+    let b = (this.state.order);
+
+    if (b === "asc") {
+      a.sort((x, y) => {
+        return y.age - x.age;
+      });
+
+      this.setState({ employee: a, order: "desc" })
+    }
+
+
+    if (b === "desc") {
+      a.sort((x, y) => {
+        return x.age - y.age;
+      });
+
+      this.setState({ employee: a, order: "asc" })
+    }
+  }
+
+
+  twoWayBinding = (index, event) => {
+    const { employee } = this.state;
+    employee[index].name = event.target.value;
+
+    this.setState({
+      employee
+    });
+  }
+
+  render() {
+    const persons = this.state.employee.map((n, index) => {
+
+      return (<PersonFunction {...n} click={this.twoWayBinding.bind(this, index)} />);
+    });
+    return (
+      <div className="App">
+        <Head />
+        <button onClick={this.change_state_value.bind(this, "parthasarathy", "adarsh kumar")} >change state value</button>
+        <button onClick={this.sortingByName} >Sort Name</button>
+        <button onClick={this.sortingByAge} >Sort age</button>
+        <div className="middle-content">
+          {persons}
+        </div>
+
+      </div>
+
+    );
+  }
+}
+
+export default App;
+
+
+
+
+
+
+funct.js:
+
+
+import React from 'react';
+import './funct.css';      
+ export const PersonFunction=(propss) =>{
+     const {name,age,...args} = propss;
+     const {company}=args;
+     return(
+         
+         <div>
+           <p>  Employee {name} and Employee {age} - {company}</p>
+           <input type="text" onChange={propss.click}/>
+         </div>
+
+     );
+ }
+ 
+
+index.js:
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();
+
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
+
+	<!-- target -->
+	<bean id="eddie" class="edu.aspire.Instrumentalist1">
+		<property name="instrument">
+			<!-- inner bean -->
+			<bean class="edu.aspire.Guitar1" />
+		</property>
+	</bean>
+
+	<!-- advice -->
+	<bean id="audience" class="edu.aspire.Audience1" />
+
+	<aop:config>
+		<aop:aspect ref="audience">
+			<!-- Named pointcut to eliminate redundant pointcut definitions -->
+			<aop:pointcut id="performance"
+				expression="execution(* edu.aspire.Performer1.perform(..))" />
+			<aop:before pointcut-ref="performance" method="takeSeats()" />
+			<aop:before pointcut-ref="performance" method="turnOffCellPhones" />
+			<aop:after-returning pointcut-ref="performance"
+				method="applaud" />
+			<!-- 
+			<aop:around pointcut-ref="performance" method="watchPerformance" />-->
+			<!-- 
+			<aop:after-throwing pointcut-ref="performance"
+				method="demandRefund" /> -->
+		</aop:aspect>
+	</aop:config>
+</beans>

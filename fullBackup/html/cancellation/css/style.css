@@ -1,0 +1,105 @@
+.cancel-center
+{
+	background-color: #f6f6f6;
+}
+.ticketcancel-text
+{
+	padding-top: 30px;
+	text-align: center;
+	color:#535559;
+	font-size: 26px;
+	display: block;
+	font-weight: 700;
+}
+.ticket-text
+{
+	display: block;
+	text-align: center;
+	margin-left: 10px;
+	padding-top: 20px;
+	color: grey;
+}
+.form-spacing
+{
+	padding-top: 10px;
+	padding-left: 150px;
+}
+body
+{
+	background-color: white;
+}
+.search-box {
+    width: 285px;
+    padding-top: 15px;
+    height: 50px;
+    background-color: #fff;
+    left: 28%;
+    box-shadow: 1px 2px 3px #888;
+    position: relative;
+}
+.fl {
+    float: left;
+}
+.icon-ticket {
+    font-size: 23px;
+    display: inline-block;
+    padding-top: 7%;
+    padding-right: 6%;
+    padding-left: 6%;
+    color: gray;
+}
+#cancelTicket {
+    border: none;
+    outline: none;
+}
+.cancel_btn {
+    height: 50.5px;
+    width: 125px;
+    border-width: 0;
+    background-color: #d74f57;
+    color: #f8d1ce;
+    margin-top:10px;
+    padding-right: 10px;
+    box-shadow: 1px 2px 3px #888;
+    text-align: center;
+}
+.input.db {
+	padding-top: 5px;
+    color: #404040;
+    width: 75%;
+    height: 48px;
+    font-weight: 400;
+    font-size: 16px;
+}
+.Ticket_table,.Table_Heading,.Table_Data {
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+}
+.BookedTicket_Color{
+    background-color: #206ae5;
+}
+.Content_Color{
+background-color:#7ea5e5;
+}
+.Table_Heading{
+    padding:5px;
+    }
+ .Table_Data{
+    padding:5px;
+    text-align: left;
+}
+.table-wholesection
+{
+    padding-top:5px;
+}
+.button-cancel
+{
+    padding-top: 20px;
+    float: right;
+}
+.radio input[type=radio]
+{
+    position: relative;
+    margin-left: 0px;
+}

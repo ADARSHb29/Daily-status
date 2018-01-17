@@ -1,0 +1,19 @@
+Fonts:
+ - font-family- "Arial",
+
+Font-size
+ - Body - 13px
+ - Headding:- 30px;
+ - secondary Headding :- 16px;
+
+Colors:-
+
+ - light-gray:#e2e2e2
+ - orange:- #f26622
+ - black:-#000
+ - blue:-#1b9fdd;
+ - dark-gray:-#8a8a89
+ - Red - #bf0125;
+ - Footer Grey - #3e3e3e;
+
+Content:- Use any dummy content.

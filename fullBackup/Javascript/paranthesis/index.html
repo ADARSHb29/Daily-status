@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<p>Enter the expression<input type="text"id="input"/>
+<button name="b"type="submit" onclick="main()">Click Me</button></p><br><br>
+<input type="text"id="result"/>
+<script type="text/javascript">
+function ArePair(o,c)
+{
+	if(o == '(' && c == ')') return true;
+	else
+	return false;
+}
+function paranthesisexpcheck(exp)
+{ 
+  var top=-1;
+  var arraylen=exp.length;
+  var s=[];
+  if(exp[0]==')'||(exp[arraylen]=='(')||(exp.length=='0'))
+  {
+  	return false;
+  }
+  for(i=0;i<arraylen;i++)
+  {
+  	if(exp[i]=='(')
+  		{
+  			s.push(exp[i]);top++;
+  		}
+    else if(exp[i]==')')
+    {
+    	if(!ArePair(s[top],exp[i]))
+    		return false;
+    	else
+    		s.pop();
+    	    top--;
+    }
+  }
+  if(s.length==0){
+  	return true;
+  }
+  else{
+  	return false;
+  }
+}
+function main(){
+	var exp1=document.getElementById('input').value;
+	var exp=exp1.split("");
+	if(paranthesisexpcheck(exp)){
+		document.getElementById('result').value="Balanced";
+	}
+	else{
+			document.getElementById('result').value="Unbalanced";
+		}
+}
+</script>
+</body>
+</html>

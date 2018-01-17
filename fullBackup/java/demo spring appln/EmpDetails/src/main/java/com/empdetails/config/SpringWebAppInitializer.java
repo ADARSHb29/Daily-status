@@ -1,0 +1,37 @@
+package com.empdetails.config;
+
+import javax.servlet.FilterRegistration;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRegistration;
+
+import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.context.ContextLoaderListener;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.filter.CharacterEncodingFilter;
+import org.springframework.web.servlet.DispatcherServlet;
+
+public class SpringWebAppInitializer implements WebApplicationInitializer {
+
+	public void onStartup(ServletContext servletContext) throws ServletException {
+		AnnotationConfigWebApplicationContext appcontext = new AnnotationConfigWebApplicationContext();
+		appcontext.register(ApplicationContextConfig.class);
+		ServletRegistration.Dynamic dispatcher=servletContext.addServlet("SpringDispatcher", new DispatcherServlet(appcontext));
+		dispatcher.setLoadOnStartup(1);
+        dispatcher.addMapping("/");
+        dispatcher.setInitParameter("contextClass", appcontext.getClass().getName());
+        
+        servletContext.addListener(new ContextLoaderListener(appcontext));
+         
+        FilterRegistration.Dynamic fr = servletContext.addFilter("encodingFilter", CharacterEncodingFilter.class);
+ 
+        fr.setInitParameter("encoding", "UTF-8");
+        fr.setInitParameter("forceEncoding", "true");
+        fr.addMappingForUrlPatterns(null, true, "/*");  
+		
+	}
+
+	
+	
+
+}

@@ -1,0 +1,70 @@
+middle content js:
+
+import React from 'react';
+import './funct.css';      
+ export const Person_function=(propss) =>{
+     const {name,age} = propss;
+     return(
+         <div>
+         Employee {name} and Employee {age}
+         </div>
+     );
+ }
+ export const Employee_details=[{name:"partha",key:1,
+age:21},{name:"adarsh",key:2,age:25},{name:"nirmal",key:5,age:56}];
+
+
+header js:
+
+import React from 'react';
+import './header.css';
+
+export default  ()=>{
+    return (<header>  Employee Details </header>);};
+
+
+app.js:
+
+
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import {Person_function,Employee_details} from './function/funct';
+import Head from './header/header';
+
+class App extends Component {
+
+  render() {
+ const persons = Employee_details.map((n)=>{
+   console.log(n);
+   return (<Person_function {...n}/>);
+ });
+
+
+    return (
+      <div className="App">
+          <Head />
+          <div className="middle-content">
+             {persons}
+          </div>
+      </div>
+
+    );
+  }
+}
+
+export default App;
+
+
+
+
+index.js:
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();

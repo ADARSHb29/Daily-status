@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<style>
+	table {
+  overflow: hidden;
+}
+
+tr:hover {
+  background-color: #ffa;
+}
+
+td, th {
+  position: relative;
+}
+td:hover::after,
+th:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #ffa;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+	</style>
+</head>
+<body>
+<table>
+<tr>
+<td>Hello</td>
+<td>World</td>
+</tr>
+<tr>
+<td>Hello</td>
+</td>Photon</td>
+</tr>
+</table>
+</body>

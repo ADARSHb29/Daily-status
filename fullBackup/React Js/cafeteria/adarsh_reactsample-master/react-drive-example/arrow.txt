@@ -1,0 +1,16 @@
+var materials = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+
+let a= materials.map(function(material) { 
+  return material.length; 
+}); 
+console.log(a);
+
+let b= materials.map((material) => {
+  return material.length;
+}); 
+console.log(b);

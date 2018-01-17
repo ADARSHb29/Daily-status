@@ -1,0 +1,108 @@
+body{
+	background-color: #767373;
+}
+header{
+	
+	border: 1px solid red;
+	margin-top: 0px;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 10px;
+	height: 220px;
+	display: block;
+	background-color: #D3D3D3;
+}
+.main{
+	border: 1px solid red;
+	margin-right: 100px;
+	margin-left: 100px;
+	margin-bottom: 10px;
+	height: 530px;
+	display: block;
+	background-color: #D3D3D3;
+}
+footer{
+	padding-left: 20px;
+	padding-top: 5px;
+	border: 1px solid red;
+	margin-left: 100px;
+	margin-right: 100px;
+	height: 180px;
+	display: block;
+	background-color: #D3D3D3;
+}
+.heading{
+	margin-top:10px;
+	margin-left:30px;
+}
+.head-content{
+	margin-top: 5px;
+	margin-left: 10px;
+}
+.head-logo
+{
+	border: 1px solid red;
+	margin-top: 10px;
+	margin-left: 30px;
+	width: 400px;
+	height: 150px;
+	display: inline-block;
+	float:left;
+}
+.head-navi{
+	display: inline-block;
+	border: 1px solid red;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	height: 80px;
+	width: 1200px;
+	margin-top: 80px;
+}
+.main-content{
+	margin-top: 10px;
+	margin-left: 30px;
+}
+.main-l1{
+	border: 1px solid red;
+	margin-top: -10px;
+	margin-left: 30px;
+	width: 1100px;
+	height: 180px;
+	display: inline-block;
+}
+.main-r1{
+	border: 1px solid red;
+	display: inline-block;
+	margin-top: -10px;
+	margin-left: 30px;
+	width: 483px;
+	height: 180px;
+}
+.middle{
+	margin-left: 30px;
+	margin-top: 10px;
+	margin-right: 32px;
+	border: 1px solid red;
+	display: block;
+	height: 125px;
+}
+.main-l2{
+	margin-left: 30px;
+	margin-top: 10px;
+	display: inline-block;
+	border: 1px solid red;
+	height: 140px;
+	width: 500px;
+}
+.main-r2{
+	margin-left: 30px;
+	margin-top: 10px;
+	display: inline-block;
+	border: 1px solid red;
+	height: 140px;
+	width: 1084px;
+}
+.inline{
+	margin-top:5px;
+	margin-left:10px;
+}

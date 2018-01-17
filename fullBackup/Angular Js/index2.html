@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body ng-app="helloo">
+<he></he>
+<user></user>
+<script>
+	var abc=angular.module("helloo",[]);
+	abc.directive("he",function() {
+		return{
+			restrict : "E",
+			template : "<h1>Sehwag</h1>"
+		};
+	});
+	abc.directive("user",function() {
+		return{
+				template:"<h2>Mahi</h2>"
+		};
+	});
+</script>
+</body>
+</html>

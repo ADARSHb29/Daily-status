@@ -1,0 +1,13 @@
+.border{
+ border-color: black;
+ border-style: solid;
+ border-width: 2px;
+ height: 200px;
+}
+.glyphicon {
+ font-size: 60px;
+ padding: 10px;
+}
+.nav{
+	padding-top: 10px;
+}

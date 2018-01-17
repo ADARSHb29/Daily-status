@@ -1,0 +1,11 @@
+let employee ={
+       name:"partha",
+       project:{
+          pname:"loreal",
+          pid:21
+       }
+   
+}
+let {name:emp1,project:{pname:p1,pid:pid1}}=employee;
+
+console.log(emp1,p1,pid1);

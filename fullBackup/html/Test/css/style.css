@@ -1,0 +1,144 @@
+.navbar-inverse {
+   background-color: #519ade;
+   border-color: #519ade;
+}
+.belownavbar{
+	background-image: url("../images/bg55.jpg");
+	height: 500px;
+	width: 100%;
+	margin-top:-20px;
+	position: relative;
+	display: block;
+}
+
+.login-form{
+	display: inline-block;
+	height: 300px;
+	width: 250px;
+	border:1px solid black;
+	margin: 10px 0px 10px 350px;
+	right: 50px;
+	position: absolute;
+	float: right;
+}
+.photon-services{
+	position: relative;
+	top: 15px;
+	height: 600px;
+	width: 100%;
+	display: block;
+}
+.image-andtext{
+	display: block;
+	height: 250px;
+	width: 100%;
+	
+}
+.admission-part{
+	display: block;
+	height: 250px;
+	width: 100%;
+}
+.foot{
+	height: 100px;
+	width: 100%;
+	border:2px solid black;
+}
+.services-box{
+ height: auto;
+}
+.services-logo-section{
+	padding: 10px 10px 10px 10px;
+	text-align: center; 
+	height: 150px;
+}
+.icon-spacing{
+	padding-top: 10px;
+	padding-left: 10px;
+	float: left;
+}
+.glyphicon{
+	font-size: 60px;
+	color: red;
+}
+.glyphicon-flag{
+	font-size: 60px;
+	color: black;
+}
+.glyphicon-home{
+	font-size: 40px;color: black;
+}
+.service1-content{
+	margin-left: 70px;
+}
+.service-heading{
+	font-size: 30px;
+	font-family:"Arial";
+	color: #519ade;
+}
+body{
+	font-family:"Arial";
+}
+.girl{
+	display: inline-block;
+	background-color: blue;
+	background-image:url("../images/middle.jpg");
+	background-size: cover;
+	height: 250px;
+	width: 50%;
+}
+.random-text{
+	display: inline-block;
+	background-color: #519ade;
+	height: 250px;
+	width: 50%;
+	padding: 20px;
+}
+#white{
+	color:white;
+	font-family: "Arial";
+}
+.admission-logo{
+	display: block;
+	padding: 10px;
+	height: 50px;
+}
+.admission-logo-section{
+	text-align: center;
+}
+.paragraph{
+	font-family: "Arial";
+	padding: 20px;
+}
+.btn-danger
+{
+text-transform: uppercase;
+}
+footer
+{
+font-size: 13px;
+font-family:Arial;
+clear:both;
+line-height: 50px;
+background-color: #8a8a89;
+height:50px;
+}
+.foot-content
+{   
+display:inline-block;
+}
+.website-name{
+display:inline-block;
+}
+.a-color{
+color:white;
+}
+.login-form{
+	background-color: #e2e2e2;
+}
+.login-head{
+	background-color: #8a8a89;
+}
+.login-padingleft{
+	margin-left: 10px;
+}
