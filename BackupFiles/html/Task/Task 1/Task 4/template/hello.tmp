@@ -1,0 +1,11 @@
+<div id="bcd"class="frame-hello">
+		<div><b>project name:</b></div><div id="project-name-value">{{projectName}}</div>
+		<div><b>project code:</b></div><div id="project-code-value">{{projectId}}</div>
+		<div id="action">
+		{{#each surplusMembers}}
+			<div>firstname:{{firstName}}</div>
+			<div>lastname:{{lastName}}</div>
+			<br>
+		{{/each}}
+		</div>
+</div>

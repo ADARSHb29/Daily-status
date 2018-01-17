@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script type="text/javascript" src="foodctrl.js"></script>
+        <style>
+.selected {
+    background-color:black;
+    color:white;
+    font-weight:bold;
+}
+</style>
+    </head>
+    <body ng-app="foodApp" ng-controller="foodCtrl">
+        <table class="table table-bordered" >
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            <tr ng-repeat="item in foodItems" ng-class="{'selected':$index == selectedRow}" ng-click="setClickedRow($index)">
+                <td></td>
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.quantity}}</td>
+            </tr>
+        </table>
+    <script src="js/angular.js"></script>
+    <script src="js/foodCtrl.js"></script>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+<div class="frame-criteria">
+		<div>project name:</div><div id="project-name-value">test</div>
+		<div>project code:</div><div id="project-code-value">test</div>
+</div>

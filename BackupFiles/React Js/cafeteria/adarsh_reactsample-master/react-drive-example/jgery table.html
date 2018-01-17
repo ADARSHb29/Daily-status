@@ -1,0 +1,43 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<style>
+.red-cell {
+   background: #F00; /* Or some other color */
+}
+</style>
+<body>
+<table>
+<tr>
+    <th>Author(s)</th>
+    <th>Book Title</th>
+    <th>Read?</th>
+</tr>
+<tr >
+    <td> parthasarathy</td>
+    <td>revolution 2020</td>
+    <td>read</td>
+</tr>
+<tr >
+    <td> parthasarathy</td>
+    <td>revolution 2020</td>
+    <td>read</td>
+</tr>
+<tr >
+    <td> parthasarathy</td>
+    <td>revolution 2020</td>
+    <td>read</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('tr').click( function() {
+  	$('tr').removeClass("red-cell");
+    $(this).addClass("red-cell");
+  } );
+} );
+</script>
+</html>

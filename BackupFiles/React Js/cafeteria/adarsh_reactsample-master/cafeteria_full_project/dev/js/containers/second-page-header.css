@@ -1,0 +1,21 @@
+.header_body
+{
+    padding: 20px;
+    background-color: black;
+}
+.display_user{
+    font-family: Comic Sans MS;
+    font-size: 20px;
+    color:red;
+    display:inline-block;
+    float:right;
+    Margin-top: 5px;
+}
+.display_heading{
+    letter-spacing: 9px;
+    font-family:fantasy;
+    font-size: 40px;
+    color:white;
+    display:inline-block;
+    padding-left: 260px;
+}

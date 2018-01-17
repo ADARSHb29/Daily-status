@@ -1,0 +1,38 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<style>
+.red-cell {
+   background: #F00; /* Or some other color */
+}
+</style>
+<body ng-app="myapp" ng-controller="contrl">
+<table>
+<tr>
+    <th>Author(s)</th>
+    <th>Book Title</th>
+    <th>Read?</th>
+</tr>
+<tr ng-repeat=" x in data1" ng-class="{'red-cell':$index == selectedRow}" ng-click="setClickedRow($index)">
+    <td> {{x.author}}</td>
+    <td>{{x.title}}</td>
+    <td>{{x.status}}</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript">
+var app = angular.module("myapp", []);
+app.controller('contrl', function($scope)
+{
+  $scope.selectedRow = null;  // initialize our variable to null
+  $scope.setClickedRow = function(index){  //function that sets the value of selectedRow to current index
+     $scope.selectedRow = index;
+  }
+        $scope.data1 = [{ author:'parthasarathy',title:"revolution 2020", status:"yes"}, 
+        {author:'parthasarathy',title:"revolution 2020", status:"yes"},
+        {author:'parthasarathy',title:"revolution 2020", status:"yes"}];
+});
+</script>
+</html>

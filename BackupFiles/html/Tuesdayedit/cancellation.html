@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="cancel_bg">
+
+<nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+     <a href="index.html"><img class="navbar-brand nav-logo" src="images/photon-logo.png"></a>
+      <button type="button" class="navbar-toggle col-lg-6" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav nav-list-align">
+        <li><a href="cancellation.html">Cancellation</a></li>
+        <li><a data-toggle="modal" data-target="#myModal2">Help</a></li>
+        <li><a href="faq.html">FAQ's</a></li>
+        </ul>
+        <button type="button" class="btn btn-primary btn-lg home-sign-up-button" data-toggle="modal" data-target="#myModal">
+  Sign out
+</button>
+    </div>
+    </nav>
+<section class="container-fluid  cancel-center">
+<section class="container col-lg-12 col-sm-12"> 
+<section class=" ticketcancel-text col-lg-12 col-sm-12 col-xs-12">
+  <p>TICKET CANCELLATION</p>
+</section>
+<section class="col-lg-12 form-spacing">
+<section  ng-app="myApp" ng-controller="ticketsCtrl" class="col-lg-12 col-xs-12 table-wholesection">
+<table class="col-xs-12 Ticket_table"style="width:100%" border="1">
+    <tr class="BookedTicket_Color">
+    <th class="Table_Heading" colspan="5">Booked Tickets</th>
+    </tr>
+    <tr class="Content_Color">
+  <th class="Table_Heading">Select</th>
+  <th class="Table_Heading">Bus Number:</th>
+  <th class="Table_Heading">From:</th>
+  <th class="Table_Heading">To:</th>
+  <th class="Table_Heading">Date:</th>
+  </tr>
+  <tr ng-repeat="x in names">
+  <td><input type="radio" id="radioBtn" onclick="test(this)"></td>
+<td>{{x.Busno}}</td>
+<td>{{x.From}}</td>
+<td>{{x.To}}</td>
+<td>{{x.Date}}</td>
+</tr>
+</table>
+</section>
+</section>
+<section class="col-lg-2 col-lg-offset-5 col-sm-2 col-sm-offset-5 col-xs-6 col-xs-offset-3 button-cancel"><input type="submit" value="Cancel Ticket" class="cancel_btn" id="cancelTicket"></section>
+</section>
+</section>
+
+<footer>
+  <section class="social-align">
+<a href="#" class="social fa fa-facebook "></a>
+<a href="#" class="social fa fa-twitter"></a>
+<a href="#" class="social fa fa-google"></a>
+<a href="#" class="social 
+fa fa-linkedin"></a>
+</section>
+  <p class="copyright">&copy; Copyright 2017 GoTrip. All Rights Reserved.</p>
+</footer>
+<script>
+var radioState = false;
+   function test(element){
+       if(radioState == false) {
+           check();
+           radioState = true;
+       }else{
+           uncheck();
+           radioState = false;
+       }
+   }
+   function check() {
+       document.getElementById("radioBtn").checked = true;
+   }
+   function uncheck() {
+       document.getElementById("radioBtn").checked = false;
+   }
+
+var app = angular.module('myApp', []);
+app.controller('ticketsCtrl', function($scope) {
+    $scope.names = [
+      { "Busno" : "11", "From" : "DLF", "To" : "Guindy","Date":"06/11/2017" },
+
+    ];
+});
+</script>
+</body>
+</html>

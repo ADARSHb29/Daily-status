@@ -1,0 +1,58 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd  
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+	<context:component-scan base-package="edu.aspire.daos" />
+	<!-- Externalizing the configuration -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<array>
+				<value>connection.properties</value>
+			</array>
+		</property>
+	</bean>
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${driver_class_name}" />
+		<property name="url" value="${url}" />
+		<property name="username" value="${username}" />
+		<property name="password" value="${password}" />
+		<property name="initialSize" value="${initial_size}" />
+		<property name="maxActive" value="${max_size}" />
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.use_sql_comments">true</prop>
+				<prop key="hibernate.transaction.factory_class">
+					org.hibernate.transaction.JDBCTransactionFactory
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">create</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<array>
+				<value>Customer.hbm.xml</value>
+			</array>
+		</property>
+		<!-- Including all *.hbm.xml files from directory. -->
+		<!-- <property name="mappingDirectoryLocations">
+		          <array>
+		               <value>classpath:.</value> 
+			      </array>
+			 </property> -->
+	</bean>
+
+	<bean class="org.springframework.orm.hibernate3.HibernateTemplate" autowire="byType" />
+
+	<!-- Below <bean> element no longer required -->
+	<!-- <bean id="custdao" class="edu.aspire.daos.CustomerDaoImpl"> 
+	           <property name="hibernateTemplate" ref="hibernateTemplate"/> 
+		</bean> -->
+</beans>
+

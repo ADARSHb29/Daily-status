@@ -1,0 +1,48 @@
+/*Side Navbar CSS*/
+.admin-nav-text{
+	padding-bottom:73px;
+	font-family: fantasy;
+	font-size: 19px;
+  font-color: #ffffff;
+}
+.admin-navbar{
+  background-image: url("../images/set1.gif");
+  background-size: contain;
+  display: block;
+}
+
+.admin-bg{
+  background-image: url("../images/");
+  display:block;
+}
+
+/*Side Navbar CSS*/
+
+
+
+
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  }
+  @media (max-width: 450px){
+  	.text-in-nav{
+  		padding-bottom:0px;
+  		font-size: 10px;
+  	}
+  }
+  

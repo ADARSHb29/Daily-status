@@ -1,0 +1,71 @@
+body {
+  font-family: 'gordita',-apple-system,BlinkMacSystemFont,Roboto,Helmet,Freesans,sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #222;
+}
+
+#app {
+  width: 80%;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 1rem .5rem;
+}
+
+.item {
+  font-size: 0.875rem;
+  line-height: 1.3125;
+  font-weight: 400;
+  color: #455b67;
+}
+
+li:nth-of-type(2n) {
+  background: #fafafa;
+}
+
+li span {
+  flex: 1 0;
+  color: #455b67;
+}
+
+.title {
+  font-weight: 700;
+  font-size: .74375rem;
+  color: #7290a0;
+  text-transform: uppercase;
+}
+
+.sign {
+  color: #7290a0;
+  font-size: 75%;
+  font-weight: 500;
+  border: 1px solid #7290a0;
+  border-radius: .25rem;
+  padding: .25rem .5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.sign:hover {
+  background: #7290a0;
+  color: #fff;
+}
+
+.sign-complete {
+  background: #009356;
+  color: #fff;
+  border: 1px solid #009356;
+}
+
+.sign-complete:hover {
+  cursor: not-allowed;
+  background: #009356;
+}

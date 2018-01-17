@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script  type="text/javascript"src="js/canceltable.js"></script>
+</head>
+<body>
+<section class="container-fluid cancel-center">
+<section class="container" class="col-lg-12">	
+<section class=" ticketcancel-text col-lg-12">
+	<p>TICKET CANCELLATION</p>
+</section>
+<section class="col-lg-12 form-spacing">
+<section  ng-app="myApp" ng-controller="ticketsCtrl" class="col-lg-12 col-xs-12 table-wholesection">
+<table class="Ticket_table"style="width:100%" border="1">
+    <tr class="BookedTicket_Color">
+    <th class="Table_Heading" colspan="5">Booked Tickets</th>
+    </tr>
+    <tr class="Content_Color">
+  <th class="Table_Heading">Select</th>
+  <th class="Table_Heading">Busno</th>
+  <th class="Table_Heading">From</th>
+  <th class="Table_Heading">To</th>
+  <th class="Table_Heading">Date</th>
+  </tr>
+  <tr ng-repeat="x in names">
+<td>{{x.Busno}}</td>
+<td><input type="radio" id="radioBtn" onclick="test(this)"/></td>
+<td>{{x.From}}</td>
+<td>{{x.To}}</td>
+<td>{{x.Date}}</td>
+</tr>
+</table>
+</section>
+</section>
+<section class="button-cancel"><input type="submit" value="Cancel Ticket" class="cancel_btn" id="cancelTicket"></section>
+</section>
+</section>
+</body>
+</html>
