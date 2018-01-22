@@ -1,0 +1,10 @@
+body {
+  background:orange;
+}
+
+p {
+  display: flex;
+  color:green;
+  font-style: italic;
+  font-size: responsive;
+}
