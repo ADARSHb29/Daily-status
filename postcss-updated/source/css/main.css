@@ -9,11 +9,66 @@ lost-utility:edit;
 .content--middle1-info,
 .content--middle2-info,
 .content--right-info{
-    lost-column:1/4;
+    lost-column:1/4 4;
     height:45px;
+    background-color: yellow;
+}
+.second-row{
+    background-color: magenta;
+    lost-column:1/1;
+    height: 45px;
+    margin-left:50px;
+}
+.third-1st-row,
+.third-2nd-row{
+   lost-column:1/2 2;
+   height: 45px;
+   background-color:palegreen;
+}
+.fourth-1st-half{
+    background-color:grey;
+    height: 180px;
+}
+.fourth-2nd-half{
+    height: 180px;
+}
+.fourth-1st-half,.fourth-2nd-half{
+   lost-column:1/2;
+}
+.fourth-2nd-1st-half,.fourth-2nd-2nd-half{
+    lost-column:1/1;
+}
+.fourth-2nd-1st-half{
+    background-color: yellowgreen;
+    height: 90px;
+}
+.fourth-2nd-2nd-half{
+    background-color:pink;
+    height: 90px;
+}
+.fifth-1st-half{
+    height: 180px;
+}
+.fifth-2nd-half{
+    height: 180px;
+    background-color: brown;
+}
+.fifth-1st-half,.fifth-2nd-half{
+    lost-column:1/2;
+ }
+ .fifth-1st-1st-half,.fifth-1st-2nd-half{
+    lost-column:1/1;
+}
+.fifth-1st-1st-half{
+    background-color:olive;
+    height: 90px;
+}
+.fifth-1st-2nd-half{
+    background-color:rgb(192, 255, 247);
+    height: 90px;
 }
 /*Tab view*/
-@media  screen and (min-width:500px) and (max-width:750px){
+@media  screen and (min-width:500px) and (max-width:1025px){
     .content--left-info{
         background-color: red;
         margin:0px;
@@ -76,5 +131,58 @@ lost-utility:edit;
         {
             lost-column:1/1 1;
             height:100px;
+        }
+        .second-row{
+            background-color: magenta;
+            lost-column:1/1 1;
+            height: 45px;
+            margin-left:50px;
+        }
+        .third-1st-row,
+        .third-2nd-row{
+           lost-column:1/1 1;
+           height: 45px;
+        }
+        .fourth-1st-half{
+            background-color:grey;
+            height: 180px;
+        }
+        .fourth-2nd-half{
+            height: 180px;
+        }
+        .fourth-1st-half,.fourth-2nd-half{
+           lost-column:1/1;
+        }
+        .fourth-2nd-1st-half,.fourth-2nd-2nd-half{
+            lost-column:1/1;
+        }
+        .fourth-2nd-1st-half{
+            background-color: yellowgreen;
+            height: 90px;
+        }
+        .fourth-2nd-2nd-half{
+            background-color:pink;
+            height: 90px;
+        }
+        .fifth-1st-half{
+            height: 180px;
+        }
+        .fifth-2nd-half{
+            height: 180px;
+            background-color: brown;
+        }
+        .fifth-1st-half,.fifth-2nd-half{
+            lost-column:1/1;
+         }
+         .fifth-1st-1st-half,.fifth-1st-2nd-half{
+            lost-column:1/1;
+        }
+        .fifth-1st-1st-half{
+            background-color:olive;
+            height: 90px;
+        }
+        .fifth-1st-2nd-half{
+            background-color:rgb(192, 255, 247);
+            height: 90px;
         }
 }
