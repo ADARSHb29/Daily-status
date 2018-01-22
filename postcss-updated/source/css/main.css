@@ -1,0 +1,80 @@
+*{
+lost-utility:edit;
+}
+.content{
+    lost-center : 900px;
+}
+/*Desktop view */
+.content--left-info,
+.content--middle1-info,
+.content--middle2-info,
+.content--right-info{
+    lost-column:1/4;
+    height:45px;
+}
+/*Tab view*/
+@media  screen and (min-width:500px) and (max-width:750px){
+    .content--left-info{
+        background-color: red;
+        margin:0px;
+        padding: 0px;
+    }
+    .content--middle1-info{
+        background-color: yellow;
+        margin:0px;
+        padding: 0px;
+    }
+    .content--middle2-info{
+        background-color:violet;
+        margin:0px;
+        padding: 0px;
+    }
+    .content--right-info{
+        background-color: green;
+        margin:0px;
+        padding: 0px;
+    }
+    .content--left-info,
+    .content--middle1-info
+        {
+            lost-column:1/2;
+            height:100px;
+        }
+    
+    .content--middle2-info,
+    .content--right-info{
+        lost-column:1/2;
+        height:100px;
+    }
+}
+/*Mobile view*/
+@media  screen and (max-width:480px){
+    .content--left-info{
+        background-color: red;
+        margin:0px;
+        padding: 0px;
+    }
+    .content--middle1-info{
+        background-color: yellow;
+        margin:0px;
+        padding: 0px;
+    }
+    .content--middle2-info{
+        background-color:violet;
+        margin:0px;
+        padding: 0px;
+    }
+    .content--right-info{
+        background-color: green;
+        margin:0px;
+        padding: 0px;
+    }
+    .content--left-info,
+    .content--middle1-info,
+    .content--middle2-info,
+    .content--right-info
+        {
+            lost-column:1/1 1;
+            height:100px;
+        }
+}
