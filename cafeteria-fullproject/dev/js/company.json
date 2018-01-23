@@ -1,0 +1,15 @@
+{
+  "employeeList": [
+    {
+      "id": 1,
+      "name": "partha",
+      "age": 21
+    }
+  ],
+  "project":[
+      {
+          "projectid":1,
+          "projectName":"jcp"
+      }
+  ]
+}
