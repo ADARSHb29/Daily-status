@@ -1,0 +1,171 @@
+get method:
+http://localhost:3002/employees
+output:
+[
+    {
+        "first": "adarsh",
+        "last": "venkatesh",
+        "id": 1,
+        "age": "29",
+        "description": "adarsh is a cricketer"
+    },
+    {
+        "first": "Nirmal",
+        "last": "Pandi",
+        "thumbnail": "http://i.imgur.com/7yUvePI.jpg",
+        "id": 3,
+        "age": "21",
+        "description": "nirmal is developerrr"
+    },
+    {
+        "first": "venky",
+        "last": "sai",
+        "age": "29",
+        "description": "iam a developer",
+        "id": 5
+    },
+    {
+        "first": "mani",
+        "last": "kandan",
+        "age": "22",
+        "id": 6,
+        "description": "Mani is a cricket player",
+        "hobby": "cricket",
+        "home": "Trichy"
+    },
+    {
+        "first": "arun",
+        "last": "jagadeesan",
+        "age": "25",
+        "description": "Arun jagadeesan is a cricket player",
+        "id": "TukJEcc"
+    },
+    {
+        "first": "mani",
+        "last": "kandan",
+        "age": "22",
+        "description": "Mani is a cricket player",
+        "id": "4"
+    }
+]
+
+
+Post method:
+http://localhost:3002/employees
+{
+        "first": "akaash",
+        "last": "sam",
+        "id": 7,
+        "age": "25",
+        "description": "akaash is a cricketer"
+    }
+output:
+
+[
+    {
+        "first": "adarsh",
+        "last": "venkatesh",
+        "id": 1,
+        "age": "29",
+        "description": "adarsh is a cricketer"
+    },
+    {
+        "first": "Nirmal",
+        "last": "Pandi",
+        "thumbnail": "http://i.imgur.com/7yUvePI.jpg",
+        "id": 3,
+        "age": "21",
+        "description": "nirmal is developerrr"
+    },
+    {
+        "first": "venky",
+        "last": "sai",
+        "age": "29",
+        "description": "iam a developer",
+        "id": 5
+    },
+    {
+        "first": "mani",
+        "last": "kandan",
+        "age": "22",
+        "id": 6,
+        "description": "Mani is a cricket player",
+        "hobby": "cricket",
+        "home": "Trichy"
+    },
+    {
+        "first": "arun",
+        "last": "jagadeesan",
+        "age": "25",
+        "description": "Arun jagadeesan is a cricket player",
+        "id": "TukJEcc"
+    },
+    {
+        "first": "mani",
+        "last": "kandan",
+        "age": "22",
+        "description": "Mani is a cricket player",
+        "id": "4"
+    },{
+        "first": "akaash",
+        "last": "sam",
+        "id": 7,
+        "age": "25",
+        "description": "akaash is a cricketer"
+    }
+]
+
+Delete method:
+http://localhost:3002/employees/7
+
+
+[
+    {
+        "first": "adarsh",
+        "last": "venkatesh",
+        "id": 1,
+        "age": "29",
+        "description": "adarsh is a cricketer"
+    },
+    {
+        "first": "Nirmal",
+        "last": "Pandi",
+        "thumbnail": "http://i.imgur.com/7yUvePI.jpg",
+        "id": 3,
+        "age": "21",
+        "description": "nirmal is developerrr"
+    },
+    {
+        "first": "venky",
+        "last": "sai",
+        "age": "29",
+        "description": "iam a developer",
+        "id": 5
+    },
+    {
+        "first": "mani",
+        "last": "kandan",
+        "age": "22",
+        "id": 6,
+        "description": "Mani is a cricket player",
+        "hobby": "cricket",
+        "home": "Trichy"
+    },
+    {
+        "first": "arun",
+        "last": "jagadeesan",
+        "age": "25",
+        "description": "Arun jagadeesan is a cricket player",
+        "id": "TukJEcc"
+    },
+    {
+        "first": "mani",
+        "last": "kandan",
+        "age": "22",
+        "description": "Mani is a cricket player",
+        "id": "4"
+    }]
+
+Patch method:
+http://localhost:3002/employees/1
+"hometown":"Erode"
